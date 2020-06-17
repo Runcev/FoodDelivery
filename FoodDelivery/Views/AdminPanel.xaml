@@ -51,7 +51,7 @@
         </DataGrid>
 
 
-        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" Margin="10,0,0,0" Text="Кільккість"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom" Margin="10,0,0,0" Text="Звіт заробітку по дням"></TextBlock>
         <ComboBox Grid.Row="0" Grid.Column="3" Margin="10,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"  DataContext="{Binding Source = {StaticResource vm}}" 
                   ItemsSource="{Binding Caterings}"
                   SelectedItem="{Binding SelectedCatering}">
@@ -72,7 +72,7 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Catering" Binding="{Binding CateringName}" Width="Auto"></DataGridTextColumn>
-                <DataGridTextColumn Header="Created at" Binding="{Binding Created_at}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date" Binding="{Binding Created_at}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Total Receipts" Binding="{Binding Total_Price}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Total Orders" Binding="{Binding Total_Orders}" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>

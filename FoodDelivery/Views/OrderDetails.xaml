@@ -36,7 +36,7 @@
                 <DataGridTextColumn Header="Страва" Binding="{Binding DishName}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Кількість" Binding="{Binding DishAmount}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Ціна" Binding="{Binding DishPrice}" Width="*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Дата" Binding="{Binding CateringID}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="ID закладу" Binding="{Binding CateringID}" Width="*"></DataGridTextColumn>
 
             </DataGrid.Columns>
 
