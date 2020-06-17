@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\icons8-export-32.png" />
+    <None Remove="Views\icons8-male-user-100.png" />
+    <None Remove="Views\icons8-male-user-50.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\icons8-export-32.png" />
+    <Resource Include="Views\icons8-male-user-100.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="FoodDelivery.Views.SignInView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FoodDelivery.Views"
+             xmlns:control="clr-namespace:FoodDelivery.Tools.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" VerticalContentAlignment="Bottom" Content="Login" />
+        <TextBox Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="30" Margin="5" TextWrapping="Wrap" Text="{Binding Login, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Image Grid.Row="0" Grid.Column="1" Height="10" Width="10" HorizontalAlignment="Center" >
+            <Image.ToolTip>
+                <TextBlock Text="Login"/>
+            </Image.ToolTip>
+        </Image>
+
+        <Image Grid.Row="0" Grid.Column="0" Height="15" Width="15"  HorizontalAlignment="Center" >
+            <Image.ToolTip>
+                <TextBlock Text="Password"/>
+            </Image.ToolTip>
+        </Image>
+
+
+
+        <control:LabelAndPasswordControl Margin="5"  Grid.RowSpan="2" Grid.Column="1" Caption="Password" Password="{Binding Password,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5" Content="Sign in" Command="{Binding SignInCommand}"/>
+        <Button Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5" Content="Sign up" Command="{Binding SignUpCommand}"/>
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5" Content="Cancel" Command="{Binding CloseCommand}"/>
+    </Grid>
+</UserControl>
